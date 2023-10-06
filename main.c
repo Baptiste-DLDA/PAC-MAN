@@ -62,6 +62,11 @@ int main(){
 
 
  while(-1){
+  printf("\n\n[z(Haut), s(Bas), d(Droite), q(Gauche)]?\n");
+  scanf("%s",&choixd);
 
+  switch(choixd){
+   case's':{table[y][x]='';y++
+}
  }
 }
