@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<string.h>
 
-char w=1;
 char perso = 'X'; //Notre perso pac man pour l'instant
 char table[20][40]; //Notre arène
 int x=1;
