@@ -3,11 +3,13 @@
 
 char perso = 'X'; //Notre perso pac man pour l'instant
 char table[20][40]; //Notre arène
+
+//Initialisation des variables
 int x=1;
 int y=1;
 int i,j;
 
-void arene(){
+void arene(){ // Création de l'arène
 //bord du haut
 for(j=0;j<40;j++){
    table[0][j]='#';
@@ -31,7 +33,7 @@ for(i=1;i<19;i++){
 //interieur
 for(i=1;i<19;i++){
   for(j=1;j<39;j++){
-   table[i][j]='.'
+   table[i][j]='.';
   }
  }
 
@@ -49,16 +51,12 @@ for(i=0;i<20;i++){
 
 int main(){
 
-  printf("*****************************************\n");
-  printf("*                          *\n");
-  printf("*          PACMAN              *\n");
-  printf("*                          *\n");
-  printf("*****************************************\n");
+  printf("*                PACMAN                *\n");
 
  arene();
  afficher();
 
- char choixd
+ char choixd;
 
 
  while(-1){
@@ -66,7 +64,23 @@ int main(){
   scanf("%s",&choixd);
 
   switch(choixd){
-   case's':{table[y][x]='';y++
-}
+   case's':{table[y][x]=' ';y++;}
+   break;
+
+   case'z':{table[y][x]=' ';y--;}
+   break;
+
+   case'q':{table[y][x]=' ';x--;}
+   break;
+
+   case'd':{table[y][x]=' ';x++;}
+   break;
+   
+   default : printf("erreur\n");
+   break;
+
+  }
+  arene();
+  afficher();
  }
 }
