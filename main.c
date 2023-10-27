@@ -2,6 +2,7 @@
 #include<string.h>
 #include<unistd.h>
 
+
 #define clear() printf("\033[H\033[J")
 
 char perso = 'X'; //Notre perso pac man pour l'instant
@@ -38,9 +39,13 @@ for(i=1;i<39;i++){
 for(i=1;i<39;i++){
   for(j=1;j<59;j++){
    table[i][j]='.';
-  }
-
+ }
+}
 //mur
+for(i=19;i<23;i++){
+ table[i][32]='|';
+}
+
 for(j=28;j<33;j++){
  table[22][j]='_';
 }
@@ -49,13 +54,11 @@ for(j=28;j<33;j++){
  table[19][j]='_';
 }
 
-for(i=19;i<23;i++){
-   table[i][28]='|';
-  }
+
 
 table[y][x]=perso;
 }
-}
+
 
 
 void afficher(){
@@ -75,7 +78,7 @@ int main(void){
  arene();
  afficher();
 
- char choixd;
+char choixd;
 
 
  while(-1){
